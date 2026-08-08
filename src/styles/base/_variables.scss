@@ -1,0 +1,22 @@
+:root {
+  --background-color-body: #191b1f;
+  --background-color-section: linear-gradient(168.42deg, rgba(255, 255, 255, 0.1) 11.58%, rgba(153, 153, 153, 0.1) 80.35%);
+  --background-color-card: rgba(37, 34, 34, 0.65);
+  --background-input: #c2d4d3;
+
+  --box-shadow-card: 2px 4px 5px 0 rgba(0, 0, 0, 0.25);
+
+  --border-section: 1px solid rgba(255, 255, 255, 0.1);
+  --border-card: 1px solid rgba(0, 0, 0, 0.1);
+
+  --font-family: 'Plus Jakarta Sans';
+
+  --color-main: #ffffff;
+  --color-accent: #6a6969;
+
+  --color-good: #009966;
+  --color-moderate: #f5cd2f;
+  --color-normal: var(--color-main);
+
+  --transition: all 0.4s ease 0s;
+}
