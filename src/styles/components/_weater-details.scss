@@ -1,0 +1,112 @@
+.weather-details {
+
+  &__forecast {
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 26px;
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    font-weight: 600;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__card {
+    flex: 0 1 106px;
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 10px;
+
+    font-weight: 600;
+    font-size: 24px;
+
+    &-day {
+    }
+
+    &-image {
+    }
+
+    &-temperature {
+    }
+  }
+
+  &__overview {
+    &-title-block {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
+
+    &-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px 20px;
+    }
+
+    &-card {
+      padding: 15px 20px;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 2.12;
+      margin-bottom: 30px;
+    }
+
+    &-num {
+      font-weight: 600;
+      font-size: 48px;
+    }
+
+    &-state {
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 2.12;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-chart {
+    }
+
+    &-sunrise,
+    &-sunset {
+      display: flex;
+      gap: 22px;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-sun {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.67;
+      color: var(--color-accent);
+    }
+
+    &-time {
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 2.12;
+    }
+  }
+}
