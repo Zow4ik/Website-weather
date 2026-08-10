@@ -2,4 +2,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-color-body);
+  font-family: var(--font-family), sans-serif;
+  color: var(--color-main);
+  font-weight: 400;
+}
+
+.wrapper {
+  max-width: 1430px;
+  padding-inline: 10px;
+}
+
+section {
+  background: var(--background-color-section);
+  border: var(--border-section);
+  padding: 40px 55px;
+  border-radius: 28px;
+}
+
+input {
+  background-color: var(--background-input);
+  border: none;
+  border-radius: 25px;
+
+  font-size: 16px;
+  line-height: 2.25;
+  color: #7e7c7c;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+.card {
+  background-color: var(--background-color-card);
+  box-shadow: var(--box-shadow-card);
+  border: var(--border-card);
+  border-radius: 12px;
 }

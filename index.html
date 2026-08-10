@@ -7,7 +7,100 @@
     <title>website-weather</title>
   </head>
   <body>
-    <main class="wrapper"></main>
+    <main class="wrapper">
+      <section class="weather-header">
+        <div class="weather-header__search">
+          <button
+            class="weather-header__search-button"
+            type="button"
+          ></button>
+          <input
+            class="weather-header__search-input"
+            type="search"
+            id=""
+            name=""
+          />
+        </div>
+        <div class="weather-header__select">
+          <img
+            class="weather-header__select-image"
+            src="/src/assets/images/thunderstorm.webp"
+            alt=""
+            width="316"
+            height="316"
+            loading="lazy"
+          />
+          <span class="weather-header__select-temperature">30°C</span>
+          <div class="weather-header__select-location">
+            <span class="weather-header__select-city">Kuala Lumpur</span>
+            <span class="weather-header__select-day">Monday</span>
+          </div>
+          <div class="weather-header__select-details">
+            <span class="weather-header__select-weather">
+              <img
+                src="/src/assets/images/cloud-rain.svg"
+                alt=""
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+              Light Rain
+            </span>
+            <span class="weather-header__select-min">
+              <img
+                src="/src/assets/images/temperature-min.svg"
+                alt=""
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+              Min Temperature - 28°C
+            </span>
+            <span class="weather-header__select-max">
+              <img
+                src="/src/assets/images/temperature-max.svg"
+                alt=""
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+              Max Temperature - 31°C
+            </span>
+          </div>
+          <div class="weather-header__select-stats card">
+            <div class="weather-header__select-stat">
+              <img
+                class="weather-header__select-stat-image"
+                src="/src/assets/images/water.svg"
+                alt=""
+                width="47"
+                height="47"
+                loading="lazy"
+              />
+              <div class="weather-header__select-stat-info">
+                <span class="weather-header__select-stat-indicator">83%</span>
+                <span class="weather-header__select-stat-text">Humidity</span>
+              </div>
+            </div>
+            <div class="weather-header__select-stat">
+              <img
+                class="weather-header__select-stat-image"
+                src="/src/assets/images/wind.svg"
+                alt=""
+                width="47"
+                height="47"
+                loading="lazy"
+              />
+              <div class="weather-header__select-stat-info">
+                <span class="weather-header__select-stat-indicator">6km/h</span>
+                <span class="weather-header__select-stat-text">Wind Speed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!--      <section class="weather-details"></section>-->
+    </main>
     <script type="module" src="/src/scripts/main.js"></script>
   </body>
 </html>
