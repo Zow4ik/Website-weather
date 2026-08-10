@@ -14,13 +14,23 @@
     font-size: 24px;
     color: rgba(255, 255, 255, 0.5);
     padding: 0;
+
+    &.active {
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      color: var(--color-main);
+    }
   }
 
   &__cards {
-    display: flex;
+    display: none;
     gap: 15px;
     justify-content: space-between;
     margin-bottom: 50px;
+
+    &.active {
+      display: flex;
+    }
   }
 
   &__card {
@@ -43,6 +53,33 @@
 
     &-temperature {
     }
+  }
+
+  &__current-day {
+    padding: 20px;
+    display: none;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__day {
+    font-weight: 600;
+    font-size: 36px;
+  }
+
+  &__temperature {
+    font-weight: 600;
+    font-size: 30px;
   }
 
   &__overview {

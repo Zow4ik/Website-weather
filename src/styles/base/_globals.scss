@@ -64,12 +64,6 @@ input[type="search"]::-webkit-search-cancel-button {
   }
 }
 
-.button--active {
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  color: var(--color-main) !important;
-}
-
 .state--good {
   color: var(--color-good);
 }
