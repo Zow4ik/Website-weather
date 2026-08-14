@@ -9,7 +9,7 @@
     margin-bottom: 50px;
 
     &-button {
-      background-image: url("@/assets/images/search.svg");
+      background-image: url("/public/images/search.svg");
       width: 24px;
       height: 24px;
       position: absolute;
@@ -21,6 +21,31 @@
     &-input {
       width: 100%;
       padding: 10px 20px 10px 65px;
+    }
+
+    &-extradition {
+      position: absolute;
+      display: none;
+      flex-direction: column;
+      width: 80%;
+      left: 50%;
+      translate: -50% 0;
+      max-height: 300px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #888 transparent;
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    &-city {
+      padding: 10px;
+      background: #7e7c7c;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #000;
     }
   }
 
@@ -62,12 +87,6 @@
       }
     }
 
-    &-city {
-    }
-
-    &-day {
-    }
-
     &-details {
       margin-bottom: 50px;
       display: flex;
@@ -79,7 +98,12 @@
       line-height: 2.12;
     }
 
-    &-weather,
+    &-detail {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
     &-max,
     &-min {
       display: flex;
@@ -96,9 +120,6 @@
     &-stat {
       display: flex;
       gap: 8px;
-
-      &-image {
-      }
 
       &-info {
         display: flex;

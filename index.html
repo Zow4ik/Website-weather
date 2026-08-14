@@ -17,82 +17,83 @@
           <input
             class="weather-header__search-input"
             type="search"
-            id=""
-            name=""
+            placeholder="Search city..."
           />
+          <div class="weather-header__search-extradition">
+          </div>
         </div>
         <div class="weather-header__select">
           <img
             class="weather-header__select-image"
-            src="/src/assets/images/thunderstorm.webp"
             alt=""
+            src=""
             width="316"
             height="316"
             loading="lazy"
+            data-js-header-image-weather
           />
-          <span class="weather-header__select-temperature">30°C</span>
+          <span
+            class="weather-header__select-temperature"
+            data-js-header-temperature
+          ></span>
           <div class="weather-header__select-location">
-            <span class="weather-header__select-city">Kuala Lumpur</span>
-            <span class="weather-header__select-day">Monday</span>
+            <span
+              class="weather-header__select-city"
+              data-js-header-city
+            ></span>
+            <span
+              class="weather-header__select-day"
+              data-js-header-today
+            ></span>
           </div>
           <div class="weather-header__select-details">
-            <span class="weather-header__select-weather">
+            <div class="weather-header__select-detail">
               <img
-                src="/src/assets/images/cloud-rain.svg"
+                src="/public/images/temperature-min.svg"
                 alt=""
                 width="24"
                 height="24"
                 loading="lazy"
               />
-              Light Rain
-            </span>
-            <span class="weather-header__select-min">
+              <span class="weather-header__select-min" data-js-header-min></span>
+            </div>
+            <div class="weather-header__select-detail">
               <img
-                src="/src/assets/images/temperature-min.svg"
+                src="/public/images/temperature-max.svg"
                 alt=""
                 width="24"
                 height="24"
                 loading="lazy"
               />
-              Min Temperature - 28°C
-            </span>
-            <span class="weather-header__select-max">
-              <img
-                src="/src/assets/images/temperature-max.svg"
-                alt=""
-                width="24"
-                height="24"
-                loading="lazy"
-              />
-              Max Temperature - 31°C
-            </span>
+              <span class="weather-header__select-min" data-js-header-max></span>
+            </div>
           </div>
           <div class="weather-header__select-stats card">
             <div class="weather-header__select-stat">
               <img
                 class="weather-header__select-stat-image"
-                src="/src/assets/images/water.svg"
+                src="/public/images/water.svg"
                 alt=""
                 width="47"
                 height="47"
                 loading="lazy"
               />
               <div class="weather-header__select-stat-info">
-                <span class="weather-header__select-stat-indicator">83%</span>
+                <span class="weather-header__select-stat-indicator" data-js-header-humidity></span>
                 <span class="weather-header__select-stat-text">Humidity</span>
               </div>
             </div>
             <div class="weather-header__select-stat">
               <img
                 class="weather-header__select-stat-image"
-                src="/src/assets/images/wind.svg"
+                src="/public/images/wind.svg"
                 alt=""
                 width="47"
                 height="47"
                 loading="lazy"
               />
               <div class="weather-header__select-stat-info">
-                <span class="weather-header__select-stat-indicator">6km/h</span>
+                <span class="weather-header__select-stat-indicator" data-js-header-wind></span>
                 <span class="weather-header__select-stat-text">Wind Speed</span>
               </div>
             </div>
@@ -101,132 +102,20 @@
       </section>
       <section class="weather-details">
         <div class="weather-details__forecast">
-          <div class="weather-details__buttons">
-            <button
-              class="weather-details__button"
-              type="button"
-              data-js-button-today
-            >
-              Today
-            </button>
-            <button
-              class="weather-details__button active"
-              type="button"
-              data-js-button-week
-            >
-              Week
-            </button>
-          </div>
-          <ul data-js-block-week class="weather-details__cards active">
-            <li class="weather-details__card card">
-              <span class="weather-details__card-day">Sun</span>
-              <img
-                class="weather-details__card-image"
-                src="/src/assets/images/windy-day.webp"
-                alt="70"
-                width="70"
-                height=""
-                loading="lazy"
-              />
-              <span class="weather-details__card-temperature">32°</span>
-            </li>
-            <li class="weather-details__card card">
-              <span class="weather-details__card-day">Mon</span>
-              <img
-                class="weather-details__card-image"
-                src="/src/assets/images/windy-day.webp"
-                alt="70"
-                width="70"
-                height=""
-                loading="lazy"
-              />
-              <span class="weather-details__card-temperature">32°</span>
-            </li>
-            <li class="weather-details__card card">
-              <span class="weather-details__card-day">Tue</span>
-              <img
-                class="weather-details__card-image"
-                src="/src/assets/images/windy-day.webp"
-                alt="70"
-                width="70"
-                height=""
-                loading="lazy"
-              />
-              <span class="weather-details__card-temperature">32°</span>
-            </li>
-            <li class="weather-details__card card">
-              <span class="weather-details__card-day">Wed</span>
-              <img
-                class="weather-details__card-image"
-                src="/src/assets/images/windy-day.webp"
-                alt="70"
-                width="70"
-                height=""
-                loading="lazy"
-              />
-              <span class="weather-details__card-temperature">32°</span>
-            </li>
-            <li class="weather-details__card card">
-              <span class="weather-details__card-day">Thu</span>
-              <img
-                class="weather-details__card-image"
-                src="/src/assets/images/windy-day.webp"
-                alt="70"
-                width="70"
-                height=""
-                loading="lazy"
-              />
-              <span class="weather-details__card-temperature">32°</span>
-            </li>
-            <li class="weather-details__card card">
-              <span class="weather-details__card-day">Fri</span>
-              <img
-                class="weather-details__card-image"
-                src="/src/assets/images/windy-day.webp"
-                alt="70"
-                width="70"
-                height=""
-                loading="lazy"
-              />
-              <span class="weather-details__card-temperature">32°</span>
-            </li>
-            <li class="weather-details__card card">
-              <span class="weather-details__card-day">Sat</span>
-              <img
-                class="weather-details__card-image"
-                src="/src/assets/images/windy-day.webp"
-                alt="70"
-                width="70"
-                height=""
-                loading="lazy"
-              />
-              <span class="weather-details__card-temperature">32°</span>
-            </li>
+          <h2 class="weather-details__title">Week</h2>
+          <ul data-js-block-forecast class="weather-details__cards">
           </ul>
-          <div data-js-block-current-day class="weather-details__current-day card">
-            <div class="weather-details__content">
-              <span class="weather-details__day">Today</span>
-              <span class="weather-details__temperature">25°C</span>
-            </div>
-            <img
-              src="/src/assets/images/windy-day.webp"
-              alt=""
-              width="100"
-              height="100"
-              loading="lazy"
-            />
-          </div>
         </div>
         <div class="weather-details__overview">
           <h2 class="weather-details__overview-title-block">Today’s Overview</h2>
           <ul class="weather-details__overview-cards">
             <li class="weather-details__overview-card card">
               <h3 class="weather-details__overview-title">Air Quality Index</h3>
-              <span class="weather-details__overview-num">53</span>
+              <span class="weather-details__overview-num" data-js-air-index></span>
               <div class="weather-details__overview-state">
-                <span class="state--good">Good</span>
+                <span data-js-air-state></span>
                 <img
-                  src="/src/assets/images/air.webp"
+                  src="/public/images/air.webp"
                   alt=""
                   width="70"
                   height="70"
@@ -236,11 +125,11 @@
             </li>
             <li class="weather-details__overview-card card">
               <h3 class="weather-details__overview-title">UV Index</h3>
-              <span class="weather-details__overview-num">3</span>
+              <span class="weather-details__overview-num" data-js-uv-index></span>
               <div class="weather-details__overview-state">
-                <span class="state--moderate">Moderate</span>
+                <span data-js-uv-state></span>
                 <img
-                  src="/src/assets/images/uv.webp"
+                  src="/public/images/uv.webp"
                   alt=""
                   width="70"
                   height="70"
@@ -250,11 +139,11 @@
             </li>
             <li class="weather-details__overview-card card">
               <h3 class="weather-details__overview-title">Pressure (hpa)</h3>
-              <span class="weather-details__overview-num">1006</span>
+              <span class="weather-details__overview-num" data-js-hpa-index></span>
               <div class="weather-details__overview-state">
-                <span class="state--normal">Normal</span>
+                <span data-js-hpa-state></span>
                 <img
-                  src="/src/assets/images/hpa.webp"
+                  src="/public/images/hpa.webp"
                   alt=""
                   width="70"
                   height="70"
@@ -264,13 +153,13 @@
             </li>
             <li class="weather-details__overview-card card card--big">
               <h3 class="weather-details__overview-title">Precipitation</h3>
-              <div class="weather-details__overview-chart"></div>
+              <canvas data-js-precipitation></canvas>
             </li>
             <li class="weather-details__overview-card card">
               <h3 class="weather-details__overview-title">Sunrise & Sunset</h3>
               <div class="weather-details__overview-sunrise">
                 <img
-                  src="/src/assets/images/sunrise.svg"
+                  src="/public/images/sunrise.svg"
                   alt=""
                   width="48"
                   height="48"
@@ -278,12 +167,12 @@
                 />
                 <div class="weather-details__overview-content">
                   <span class="weather-details__overview-sun">Sunrise</span>
-                  <span class="weather-details__overview-time">7:06 AM</span>
+                  <span class="weather-details__overview-time" data-js-sunrise></span>
                 </div>
               </div>
               <div class="weather-details__overview-sunset">
                 <img
-                  src="/src/assets/images/sunset.svg"
+                  src="/public/images/sunset.svg"
                   alt=""
                   width="48"
                   height="48"
@@ -291,7 +180,7 @@
                 />
                 <div class="weather-details__overview-content">
                   <span class="weather-details__overview-sun">Sunset</span>
-                  <span class="weather-details__overview-time">7:03 PM</span>
+                  <span class="weather-details__overview-time" data-js-sunset></span>
                 </div>
               </div>
             </li>
