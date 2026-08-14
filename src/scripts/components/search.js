@@ -50,7 +50,7 @@ export default class Search {
   }
 
   searchCities(event) {
-    if (event.code !== 'Enter' && event.type !== 'click') return
+    if (event.key !== 'Enter' && event.type !== 'click') return
     const enteredCity = this.elements.input.value.trim()
 
     if (!enteredCity) return
