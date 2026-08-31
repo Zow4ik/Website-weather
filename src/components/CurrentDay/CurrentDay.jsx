@@ -1,4 +1,4 @@
-import styles from './currentDay.module.scss'
+import styles from './CurrentDay.module.scss'
 import TemperatureToday from '@/components/TemperatureToday/TemperatureToday.jsx'
 import StatsToday from '@/components/StatsToday/StatsToday.jsx'
 import InfoToday from '@/components/InfoToday/InfoToday.jsx'

@@ -1,4 +1,4 @@
-import styles from './infoToday.module.scss'
+import styles from './InfoToday.module.scss'
 
 const InfoToday = () => {
   return (

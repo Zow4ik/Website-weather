@@ -1,4 +1,4 @@
-import styles from './temperatureToday.module.scss'
+import styles from './TemperatureToday.module.scss'
 
 const TemperatureToday = () => {
   return (
