@@ -40,55 +40,6 @@
         background-color: rgba(255, 255, 255, 0.5);
       }
     }
-
-    &-details {
-      margin-bottom: 50px;
-      display: flex;
-      flex-direction: column;
-      align-self: start;
-
-      font-weight: 500;
-      font-size: 17px;
-      line-height: 2.12;
-    }
-
-    &-detail {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    &-max,
-    &-min {
-      display: flex;
-      gap: 10px;
-    }
-
-    &-stats {
-      display: flex;
-      padding: 15px;
-      gap: 34px;
-      justify-content: space-between;
-    }
-
-    &-stat {
-      display: flex;
-      gap: 8px;
-
-      &-info {
-        display: flex;
-        flex-direction: column;
-      }
-
-      &-indicator {
-        font-weight: 600;
-        font-size: 24px;
-      }
-
-      &-text {
-        font-size: 16px;
-      }
-    }
   }
 
   @media (max-width: 500px) {
