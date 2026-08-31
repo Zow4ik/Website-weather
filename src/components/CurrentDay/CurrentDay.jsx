@@ -1,4 +1,6 @@
-import styles from './CurrentDay.scss'
+import styles from './currentDay.module.scss'
+import TemperatureToday
+  from '@/components/TemperatureToday/TemperatureToday.jsx'
 
 const CurrentDay = () => {
   return (
@@ -26,34 +28,7 @@ const CurrentDay = () => {
           data-js-header-today
         ></span>
       </div>
-      <div className="weather-header__select-details">
-        <div className="weather-header__select-detail">
-          <img
-            src="/public/images/temperature-min.svg"
-            alt=""
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <span
-            className="weather-header__select-min"
-            data-js-header-min
-          ></span>
-        </div>
-        <div className="weather-header__select-detail">
-          <img
-            src="/public/images/temperature-max.svg"
-            alt=""
-            width="24"
-            height="24"
-            loading="lazy"
-          />
-          <span
-            className="weather-header__select-min"
-            data-js-header-max
-          ></span>
-        </div>
-      </div>
+      <TemperatureToday />
       <div className="weather-header__select-stats card">
         <div className="weather-header__select-stat">
           <img

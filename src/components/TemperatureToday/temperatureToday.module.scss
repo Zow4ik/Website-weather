@@ -1,0 +1,21 @@
+.container {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 2.12;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.temperature {
+  display: flex;
+  gap: 10px;
+}
