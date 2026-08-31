@@ -1,0 +1,60 @@
+.card {
+  padding: 15px 20px;
+
+  [data-js-precipitation] {
+    max-height: 150px !important;
+    width: 100% !important;
+  }
+
+  &:last-child {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 2.12;
+  margin-bottom: 20px;
+}
+
+.num {
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.state {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 2.12;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sunrise,
+.sunset {
+  display: flex;
+  gap: 22px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.sun {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.67;
+  color: var(--color-accent);
+}
+
+.time {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 2.12;
+}
