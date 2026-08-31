@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import Header from '@/components/Header/Header.jsx'
+import Wrapper from '@/components/Wrapper/Wrapper.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <Header />
-    </>
+    <Wrapper />
   )
 }
 
