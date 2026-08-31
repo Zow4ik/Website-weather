@@ -5,7 +5,7 @@ const InfoToday = () => {
     <>
       <img
         alt=""
-        src=""
+        // src=""
         width="316"
         height="316"
         loading="lazy"
