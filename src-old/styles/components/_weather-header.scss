@@ -3,52 +3,6 @@
   flex-direction: column;
   align-items: center;
 
-  &__search {
-    width: 100%;
-    position: relative;
-    margin-bottom: 50px;
-
-    &-button {
-      background-image: url("/public/images/search.svg");
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      translate: 0 -50%;
-    }
-
-    &-input {
-      width: 100%;
-      padding: 10px 20px 10px 65px;
-    }
-
-    &-extradition {
-      position: absolute;
-      display: none;
-      flex-direction: column;
-      width: 80%;
-      left: 50%;
-      translate: -50% 0;
-      max-height: 300px;
-      overflow-y: auto;
-      scrollbar-width: thin;
-      scrollbar-color: #888 transparent;
-
-      &.active {
-        display: flex;
-      }
-    }
-
-    &-city {
-      padding: 10px;
-      background: #7e7c7c;
-      text-align: center;
-      cursor: pointer;
-      border: 1px solid #000;
-    }
-  }
-
   &__select {
     display: flex;
     flex-direction: column;
