@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website-weather</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <section class="weather-header">
+        <div class="weather-header__search">
+          <button
+            class="weather-header__search-button"
+            type="button"
+          ></button>
+          <input
+            class="weather-header__search-input"
+            type="search"
+            placeholder="Search city..."
+          />
+          <div class="weather-header__search-extradition">
+          </div>
+        </div>
+        <div class="weather-header__select">
+          <img
+            class="weather-header__select-image"
+            alt=""
+            src=""
+            width="316"
+            height="316"
+            loading="lazy"
+            data-js-header-image-weather
+          />
+          <span
+            class="weather-header__select-temperature"
+            data-js-header-temperature
+          ></span>
+          <div class="weather-header__select-location">
+            <span
+              class="weather-header__select-city"
+              data-js-header-city
+            ></span>
+            <span
+              class="weather-header__select-day"
+              data-js-header-today
+            ></span>
+          </div>
+          <div class="weather-header__select-details">
+            <div class="weather-header__select-detail">
+              <img
+                src="/public/images/temperature-min.svg"
+                alt=""
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+              <span class="weather-header__select-min" data-js-header-min></span>
+            </div>
+            <div class="weather-header__select-detail">
+              <img
+                src="/public/images/temperature-max.svg"
+                alt=""
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+              <span class="weather-header__select-min" data-js-header-max></span>
+            </div>
+          </div>
+          <div class="weather-header__select-stats card">
+            <div class="weather-header__select-stat">
+              <img
+                class="weather-header__select-stat-image"
+                src="/public/images/water.svg"
+                alt=""
+                width="47"
+                height="47"
+                loading="lazy"
+              />
+              <div class="weather-header__select-stat-info">
+                <span class="weather-header__select-stat-indicator" data-js-header-humidity></span>
+                <span class="weather-header__select-stat-text">Humidity</span>
+              </div>
+            </div>
+            <div class="weather-header__select-stat">
+              <img
+                class="weather-header__select-stat-image"
+                src="/public/images/wind.svg"
+                alt=""
+                width="47"
+                height="47"
+                loading="lazy"
+              />
+              <div class="weather-header__select-stat-info">
+                <span class="weather-header__select-stat-indicator" data-js-header-wind></span>
+                <span class="weather-header__select-stat-text">Wind Speed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="weather-details">
+        <div class="weather-details__forecast">
+          <h2 class="weather-details__title">Week</h2>
+          <ul data-js-block-forecast class="weather-details__cards">
+          </ul>
+        </div>
+        <div class="weather-details__overview">
+          <h2 class="weather-details__overview-title-block">Today’s Overview</h2>
+          <ul class="weather-details__overview-cards">
+            <li class="weather-details__overview-card card">
+              <h3 class="weather-details__overview-title">Air Quality Index</h3>
+              <span class="weather-details__overview-num" data-js-air-index></span>
+              <div class="weather-details__overview-state">
+                <span data-js-air-state></span>
+                <img
+                  src="/public/images/air.webp"
+                  alt=""
+                  width="70"
+                  height="70"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="weather-details__overview-card card">
+              <h3 class="weather-details__overview-title">UV Index</h3>
+              <span class="weather-details__overview-num" data-js-uv-index></span>
+              <div class="weather-details__overview-state">
+                <span data-js-uv-state></span>
+                <img
+                  src="/public/images/uv.webp"
+                  alt=""
+                  width="70"
+                  height="70"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="weather-details__overview-card card">
+              <h3 class="weather-details__overview-title">Pressure (hpa)</h3>
+              <span class="weather-details__overview-num" data-js-hpa-index></span>
+              <div class="weather-details__overview-state">
+                <span data-js-hpa-state></span>
+                <img
+                  src="/public/images/hpa.webp"
+                  alt=""
+                  width="70"
+                  height="70"
+                  loading="lazy"
+                />
+              </div>
+            </li>
+            <li class="weather-details__overview-card card card--big">
+              <h3 class="weather-details__overview-title">Precipitation</h3>
+              <canvas data-js-precipitation></canvas>
+            </li>
+            <li class="weather-details__overview-card card">
+              <h3 class="weather-details__overview-title">Sunrise & Sunset</h3>
+              <div class="weather-details__overview-sunrise">
+                <img
+                  src="/public/images/sunrise.svg"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <div class="weather-details__overview-content">
+                  <span class="weather-details__overview-sun">Sunrise</span>
+                  <span class="weather-details__overview-time" data-js-sunrise></span>
+                </div>
+              </div>
+              <div class="weather-details__overview-sunset">
+                <img
+                  src="/public/images/sunset.svg"
+                  alt=""
+                  width="48"
+                  height="48"
+                  loading="lazy"
+                />
+                <div class="weather-details__overview-content">
+                  <span class="weather-details__overview-sun">Sunset</span>
+                  <span class="weather-details__overview-time" data-js-sunset></span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/scripts/main.js"></script>
+  </body>
+</html>
