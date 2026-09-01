@@ -1,0 +1,22 @@
+.card {
+  padding: 15px 20px;
+
+  [data-js-precipitation] {
+    max-height: 150px !important;
+    width: 100% !important;
+  }
+
+  &:last-child {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 2.12;
+  margin-bottom: 20px;
+}

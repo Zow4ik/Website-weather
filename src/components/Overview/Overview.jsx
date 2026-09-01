@@ -1,5 +1,7 @@
 import styles from './Overview.module.scss'
 import CardOverview from '@/components/CardOverview/CardOverview.jsx'
+import ChartPrecipitation
+  from '@/components/ChartPrecipitation/ChartPrecipitation.jsx'
 
 const Overview = () => {
   return (
@@ -18,10 +20,7 @@ const Overview = () => {
           title='Pressure (hpa)'
           srcImage='@/assets/images/hpa.webp'
         />
-        <li className="weather-details__overview-card card card--big">
-          <h3 className="weather-details__overview-title">Precipitation</h3>
-          <canvas data-js-precipitation></canvas>
-        </li>
+        <ChartPrecipitation />
         <CardOverview
           isSun={true}
         />
