@@ -47,6 +47,7 @@ const Search = () => {
     })
 
     setIsShowIssuing(false)
+    setValue('')
   }
 
   useEffect(() => {

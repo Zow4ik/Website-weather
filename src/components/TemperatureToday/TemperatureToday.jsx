@@ -19,7 +19,7 @@ const TemperatureToday = () => {
     <div className={styles.container}>
       <div className={styles.item}>
         <img
-          src="@/assets/images/temperature-min.svg"
+          src="/images/temperature-min.svg"
           alt=""
           width="24"
           height="24"
@@ -32,7 +32,7 @@ const TemperatureToday = () => {
       </div>
       <div className={styles.item}>
         <img
-          src="@/assets/images/temperature-max.svg"
+          src="/images/temperature-max.svg"
           alt=""
           width="24"
           height="24"

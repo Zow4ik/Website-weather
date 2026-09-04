@@ -1,4 +1,4 @@
-const isDayTime = (sunrise, sunset) => {
+const checkIsDay = (sunrise, sunset) => {
   const now = new Date()
   const sunriseTime = new Date(sunrise)
   const sunsetTime = new Date(sunset)
@@ -9,4 +9,4 @@ const isDayTime = (sunrise, sunset) => {
   return 'night'
 }
 
-export { isDayTime }
+export { checkIsDay }

@@ -16,6 +16,7 @@ const Forecast = () => {
       dataForecast.push({
         day: new Date(infoWeather.meteo.daily.time[i]).toLocaleDateString('en-US', { weekday: 'short' }),
         temperature: Math.floor(infoWeather.meteo.daily.temperature_2m_max[i]),
+        dayNumber: i,
       })
     }
   }
@@ -29,6 +30,7 @@ const Forecast = () => {
             day={item.day}
             temperature={item.temperature}
             key={item.day}
+            dayNumber={item.dayNumber}
           />
         ))}
       </ul>

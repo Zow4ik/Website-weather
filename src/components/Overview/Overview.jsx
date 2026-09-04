@@ -10,17 +10,17 @@ const Overview = () => {
       <ul className={styles.cards}>
         <CardOverview
           title='Air Quality Index'
-          srcImage='@/assets/images/air.webp'
+          srcImage='/images/air.webp'
           type='air'
         />
         <CardOverview
           title='UV Index'
-          srcImage='@/assets/images/uv.webp'
+          srcImage='/images/uv.webp'
           type='uv'
         />
         <CardOverview
           title='Pressure (hpa)'
-          srcImage='@/assets/images/hpa.webp'
+          srcImage='/images/hpa.webp'
           type='hpa'
         />
         <ChartPrecipitation />

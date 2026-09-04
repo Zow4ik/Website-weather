@@ -19,7 +19,7 @@ const StatsToday = () => {
     <div className={`${styles.stats} card`}>
       <div className={styles.stat}>
         <img
-          src="@/assets/images/water.svg"
+          src="/images/water.svg"
           alt=""
           width="47"
           height="47"
@@ -35,7 +35,7 @@ const StatsToday = () => {
       </div>
       <div className={styles.stat}>
         <img
-          src="@/assets/images/wind.svg"
+          src="/images/wind.svg"
           alt=""
           width="47"
           height="47"
