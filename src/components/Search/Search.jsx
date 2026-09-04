@@ -60,6 +60,32 @@ const Search = () => {
     return () => document.removeEventListener('click', handleClickOutSearch)
   }, []);
 
+  let issuing
+
+  if (issuingInfo) {
+    issuing = (
+      <div className={styles.extradition}>
+        {issuingInfo.map((city) => (
+          <span
+            onClick={() => handleClick(city)}
+            key={`${city.latitude}_${city.longitude}`}
+            className={styles.city}
+            data-js-latitude={city.latitude}
+            data-js-longitude={city.longitude}
+          >
+              {city.name} {city.country}
+            </span>
+        ))}
+      </div>
+    )
+  } else {
+    issuing = (
+      <div className={styles.extradition}>
+        <span className={styles.city}>not found</span>
+      </div>
+    )
+  }
+
   return (
     <div className={styles.searchContainer}>
       <button
@@ -73,21 +99,7 @@ const Search = () => {
         value={value}
         onInput={(event) => onInput(event.target.value)}
       />
-      {isShowIssuing && (
-        <div className={styles.extradition}>
-          {issuingInfo.map((city) => (
-            <span
-              onClick={() => handleClick(city)}
-              key={`${city.latitude}_${city.longitude}`}
-              className={styles.city}
-              data-js-latitude={city.latitude}
-              data-js-longitude={city.longitude}
-            >
-              {city.name} {city.country}
-            </span>
-          ))}
-        </div>
-      )}
+      {isShowIssuing && issuing}
     </div>
   )
 }

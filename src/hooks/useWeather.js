@@ -13,12 +13,15 @@ export const useWeather = () => {
 
     const response = await openMeteoApi.getTitlesCities(value)
 
-    if (!response.results) return
-    issuing(response)
+    if (response.results) {
+      issuing(response)
+    } else {
+      issuing(null)
+    }
   }
 
   const issuing = (cities) => {
-    setIssuingInfo(cities.results)
+    setIssuingInfo(cities?.results)
     setIsShowIssuing(true)
   }
 
