@@ -3,6 +3,7 @@ import { useContext, useEffect } from 'react'
 import { WeatherContext } from '@/context/WeatherContext.jsx'
 import { openMeteoApi } from '@/api/openMeteoApi.js'
 import { airOpenMeteoApi } from '@/api/airOpenMeteoApi.js'
+import {useDebounce} from '@/hooks/useDebounce.js'
 
 const Search = () => {
   const {
@@ -15,9 +16,13 @@ const Search = () => {
     setIsShowIssuing,
   } = useContext(WeatherContext)
 
-  const onInput = (value) => {
+  const debounceSearch = useDebounce((value) => {
     searchCities(value)
+  })
+
+  const onInput = (value) => {
     setValue(value)
+    debounceSearch(value)
   }
 
   const handleClick = async (cityInfo) => {
