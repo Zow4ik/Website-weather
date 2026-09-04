@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {openMeteoApi} from '@/api/openMeteoApi.js'
 
 export const useWeather = () => {
   const [value, setValue] = useState('')
@@ -9,11 +10,10 @@ export const useWeather = () => {
   const searchCities = async (value) => {
     if (!value.trim().length > 0) return
 
-    const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?count=5&name=${value}`)
-    const responseJson = await response.json()
+    const response = await openMeteoApi.getTitlesCities(value)
 
-    if (!responseJson.results) return
-    issuing(responseJson)
+    if (!response.results) return
+    issuing(response)
   }
 
   const issuing = (cities) => {
