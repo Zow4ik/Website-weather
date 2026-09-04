@@ -1,17 +1,17 @@
 import styles from './Search.module.scss'
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { WeatherContext } from '@/context/WeatherContext.jsx'
 import { openMeteoApi } from '@/api/openMeteoApi.js'
 import { airOpenMeteoApi } from '@/api/airOpenMeteoApi.js'
 import {useDebounce} from '@/hooks/useDebounce.js'
 
 const Search = () => {
+  const [value, setValue] = useState('')
+
   const {
     isShowIssuing,
     issuingInfo,
-    setValue,
     searchCities,
-    value,
     setInfoWeather,
     setIsShowIssuing,
   } = useContext(WeatherContext)
