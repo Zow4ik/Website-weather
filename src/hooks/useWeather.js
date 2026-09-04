@@ -29,5 +29,6 @@ export const useWeather = () => {
     searchCities,
     setInfoWeather,
     infoWeather,
+    setIsShowIssuing,
   }
 }

@@ -16,6 +16,7 @@ export const WeatherProvider = (props) => {
     searchCities,
     setInfoWeather,
     infoWeather,
+    setIsShowIssuing,
   } = useWeather()
 
   return (
@@ -28,6 +29,7 @@ export const WeatherProvider = (props) => {
         value,
         setInfoWeather,
         infoWeather,
+        setIsShowIssuing,
       }}
     >
       {children}

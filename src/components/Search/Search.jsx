@@ -1,5 +1,5 @@
 import styles from './Search.module.scss'
-import { useContext } from 'react'
+import {useContext, useEffect} from 'react'
 import { WeatherContext } from '@/context/WeatherContext.jsx'
 
 const Search = () => {
@@ -10,6 +10,7 @@ const Search = () => {
     searchCities,
     value,
     setInfoWeather,
+    setIsShowIssuing,
   } = useContext(WeatherContext)
 
   const onInput = (value) => {
@@ -44,7 +45,21 @@ const Search = () => {
       air: responseAirJson,
       city: cityInfo.name,
     })
+
+    setIsShowIssuing(false)
   }
+
+  useEffect(() => {
+    const handleClickOutSearch = (event) => {
+      if (!event.target.closest(styles.searchContainer)) {
+        setIsShowIssuing(false)
+      }
+    }
+
+    document.addEventListener('click', (event) => handleClickOutSearch(event))
+
+    return () => document.removeEventListener('click', handleClickOutSearch)
+  }, []);
 
   return (
     <div className={styles.searchContainer}>
