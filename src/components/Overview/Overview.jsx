@@ -11,18 +11,21 @@ const Overview = () => {
         <CardOverview
           title='Air Quality Index'
           srcImage='@/assets/images/air.webp'
+          type='air'
         />
         <CardOverview
           title='UV Index'
           srcImage='@/assets/images/uv.webp'
+          type='uv'
         />
         <CardOverview
           title='Pressure (hpa)'
           srcImage='@/assets/images/hpa.webp'
+          type='hpa'
         />
         <ChartPrecipitation />
         <CardOverview
-          isSun={true}
+          type='sun'
         />
       </ul>
     </div>

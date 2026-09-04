@@ -1,6 +1,20 @@
 import styles from './TemperatureToday.module.scss'
+import {useContext} from 'react'
+import {WeatherContext} from '@/context/WeatherContext.jsx'
 
 const TemperatureToday = () => {
+  const {
+    infoWeather
+  } = useContext(WeatherContext)
+
+  let minTemperature
+  let maxTemperature
+
+  if (infoWeather.meteo?.daily) {
+    minTemperature = Math.floor(infoWeather.meteo.daily.temperature_2m_min[0])
+    maxTemperature = Math.floor(infoWeather.meteo.daily.temperature_2m_max[0])
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.item}>
@@ -14,7 +28,7 @@ const TemperatureToday = () => {
         <span
           className={styles.temperature}
           data-js-header-min
-        ></span>
+        >Min Temperature - {minTemperature}°C</span>
       </div>
       <div className={styles.item}>
         <img
@@ -27,7 +41,7 @@ const TemperatureToday = () => {
         <span
           className={styles.temperature}
           data-js-header-max
-        ></span>
+        >Max Temperature - {maxTemperature}°C</span>
       </div>
     </div>
   )

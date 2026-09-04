@@ -1,4 +1,4 @@
-export default class OverviewUpdater {
+ export default class OverviewUpdater {
   elements = {}
 
   states = {

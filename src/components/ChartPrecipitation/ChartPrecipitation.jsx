@@ -1,8 +1,13 @@
 import styles from './ChartPrecipitation.module.scss'
-import { useEffect, useRef } from 'react'
+import {useContext, useEffect, useRef} from 'react'
 import Chart from 'chart.js/auto'
+import {WeatherContext} from '@/context/WeatherContext.jsx'
 
 const ChartPrecipitation = () => {
+  const {
+    infoWeather,
+  } = useContext(WeatherContext)
+
   const configChart = {
     type: 'line',
     data: {
@@ -49,12 +54,31 @@ const ChartPrecipitation = () => {
     },
   }
   const canvasRef = useRef(null)
+  const chartRef = useRef(null)
 
   useEffect(() => {
-    const chart = new Chart(canvasRef.current, configChart)
+    chartRef.current = new Chart(canvasRef.current, configChart)
 
-    return () => chart.destroy()
+    return () => chartRef.current.destroy()
   }, []);
+
+  useEffect(() => {
+    if (!chartRef.current) return
+    if (!infoWeather.meteo?.hourly.precipitation_probability) return
+
+    const precipitationPerHour = infoWeather.meteo.hourly.precipitation_probability
+
+    chartRef.current.data.datasets[0].data = [...precipitationPerHour]
+    chartRef.current.data.labels = [...infoWeather.meteo.hourly.time].map((item) => {
+      return new Date(item).toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      });
+    })
+
+    chartRef.current.update()
+  }, [infoWeather.meteo?.hourly]);
 
   return (
     <li className={`${styles.card} card card--big`}>

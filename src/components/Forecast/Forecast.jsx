@@ -1,16 +1,24 @@
 import styles from './Forecast.module.scss'
 import CardForecast from '@/components/CardForecast/CardForecast.jsx'
+import { useContext } from 'react'
+import { WeatherContext } from '@/context/WeatherContext.jsx'
 
 const Forecast = () => {
-  const dataForecast = [
-    { day: 'Tue', temperature: '24°C' },
-    { day: 'Web', temperature: '23°C' },
-    { day: 'Thu', temperature: '22°C' },
-    { day: 'Fri', temperature: '21°C' },
-    { day: 'Sat', temperature: '20°C' },
-    { day: 'Sun', temperature: '19°C' },
-    { day: 'Mon', temperature: '18°C' },
-  ]
+  const {
+    infoWeather,
+  } = useContext(WeatherContext)
+
+  const dataForecast = []
+
+  if (infoWeather.meteo?.daily) {
+
+    for (let i = 0; i < 7; i++) {
+      dataForecast.push({
+        day: new Date(infoWeather.meteo.daily.time[i]).toLocaleDateString('en-US', { weekday: 'short' }),
+        temperature: Math.floor(infoWeather.meteo.daily.temperature_2m_max[i]),
+      })
+    }
+  }
 
   return (
     <div>

@@ -16,7 +16,7 @@ const CardForecast = (props) => {
         height="70"
         loading="lazy"
       />
-      <span>{temperature}</span>
+      <span>{temperature}°C</span>
     </li>
   )
 }

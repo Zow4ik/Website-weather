@@ -1,11 +1,12 @@
-import { useState } from 'react'
 import Wrapper from '@/components/Wrapper/Wrapper.jsx'
+import { WeatherProvider } from '@/context/WeatherContext.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <Wrapper />
+    <WeatherProvider>
+      <Wrapper />
+    </WeatherProvider>
   )
 }
 

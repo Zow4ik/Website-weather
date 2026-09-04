@@ -1,6 +1,22 @@
 import styles from './InfoToday.module.scss'
+import {useContext} from 'react'
+import {WeatherContext} from '@/context/WeatherContext.jsx'
 
 const InfoToday = () => {
+  const {
+    infoWeather,
+  } = useContext(WeatherContext)
+
+  let city
+  let today
+  let temperature
+
+  if (infoWeather.meteo?.daily && infoWeather.meteo?.current) {
+    city = infoWeather.city
+    today = new Date(infoWeather.meteo.daily.time[0]).toLocaleDateString('en-US', { weekday: 'short' })
+    temperature = Math.floor(infoWeather.meteo.current.temperature_2m)
+  }
+
   return (
     <>
       <img
@@ -13,11 +29,13 @@ const InfoToday = () => {
       />
       <span
         className={styles.temperature}
-        data-js-header-temperature>
+        data-js-header-temperature
+      >
+        {temperature}°C
       </span>
       <div className={styles.location}>
-        <span data-js-header-city></span>
-        <span data-js-header-today></span>
+        <span data-js-header-city>{city}</span>
+        <span data-js-header-today>{today}</span>
       </div>
     </>
   )
