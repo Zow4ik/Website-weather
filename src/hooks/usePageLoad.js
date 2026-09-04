@@ -1,11 +1,12 @@
-import { openMeteoApi } from '@/api/openMeteoApi.js'
-import { airOpenMeteoApi } from '@/api/airOpenMeteoApi.js'
-import { useContext, useEffect } from 'react'
-import { WeatherContext } from '@/context/WeatherContext.jsx'
+import {openMeteoApi} from '@/api/openMeteoApi.js'
+import {airOpenMeteoApi} from '@/api/airOpenMeteoApi.js'
+import {useContext, useEffect} from 'react'
+import {WeatherContext} from '@/context/WeatherContext.jsx'
 
 const usePageLoad = () => {
   const {
     setInfoWeather,
+    setLoadedPage,
   } = useContext(WeatherContext)
 
   const defaultSubmit = async () => {
@@ -25,9 +26,11 @@ const usePageLoad = () => {
       air: responseAirMeteo,
       city: defaultParams.name,
     })
+
+    setLoadedPage(true)
   }
 
-  const pageLoaded = async() => {
+  const pageLoaded = async () => {
     const params = new URLSearchParams(window.location.search)
     const paramsStr = window.location.search.toString()
     const paramName = params.get('city')
@@ -39,27 +42,29 @@ const usePageLoad = () => {
       return
     }
 
-   const responseMeteo = await openMeteoApi.getFullData({
-     name: paramName,
-     latitude: paramLatitude,
-     longitude: paramLongitude,
-   })
+    const responseMeteo = await openMeteoApi.getFullData({
+      name: paramName,
+      latitude: paramLatitude,
+      longitude: paramLongitude,
+    })
 
-   const responseAirMeteo = airOpenMeteoApi.getFullData({
-     latitude: paramLatitude,
-     longitude: paramLongitude,
-   })
+    const responseAirMeteo = airOpenMeteoApi.getFullData({
+      latitude: paramLatitude,
+      longitude: paramLongitude,
+    })
 
-   if (responseMeteo.error || responseAirMeteo.error) {
-     await defaultSubmit()
-     return
-   }
+    if (responseMeteo.error || responseAirMeteo.error) {
+      await defaultSubmit()
+      return
+    }
 
-   setInfoWeather({
-     meteo: responseMeteo,
-     air: responseAirMeteo,
-     city: paramName,
-   })
+    setInfoWeather({
+      meteo: responseMeteo,
+      air: responseAirMeteo,
+      city: paramName,
+    })
+
+    setLoadedPage(true)
   }
 
   useEffect(() => {
@@ -67,4 +72,4 @@ const usePageLoad = () => {
   }, []);
 }
 
-export { usePageLoad }
+export {usePageLoad}

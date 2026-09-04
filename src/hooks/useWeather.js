@@ -6,6 +6,7 @@ export const useWeather = () => {
   const [isShowIssuing, setIsShowIssuing] = useState(false)
   const [issuingInfo, setIssuingInfo] = useState([])
   const [infoWeather, setInfoWeather] = useState({})
+  const [loadedPage, setLoadedPage] = useState(false)
 
   const searchCities = async (value) => {
     if (!value.trim().length > 0) return
@@ -30,5 +31,7 @@ export const useWeather = () => {
     setInfoWeather,
     infoWeather,
     setIsShowIssuing,
+    loadedPage,
+    setLoadedPage,
   }
 }

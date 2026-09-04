@@ -18,6 +18,8 @@ export const WeatherProvider = (props) => {
     setInfoWeather,
     infoWeather,
     setIsShowIssuing,
+    loadedPage,
+    setLoadedPage,
   } = useWeather()
 
   return (
@@ -31,6 +33,8 @@ export const WeatherProvider = (props) => {
         setInfoWeather,
         infoWeather,
         setIsShowIssuing,
+        loadedPage,
+        setLoadedPage,
       }}
     >
       {children}

@@ -1,0 +1,13 @@
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #3a3a3a 25%, #5a5a5a 50%, #3a3a3a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
