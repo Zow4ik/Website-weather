@@ -42,7 +42,7 @@ const Search = () => {
       longitude: longitude,
     }
 
-    window.history.replaceState(null, '', new URLSearchParams(params))
+    window.history.replaceState(null, '', '?' + new URLSearchParams(params))
 
     setIsShowIssuing(false)
     setValue('')
