@@ -48,7 +48,7 @@ const usePageLoad = () => {
       longitude: paramLongitude,
     })
 
-    const responseAirMeteo = airOpenMeteoApi.getFullData({
+    const responseAirMeteo = await airOpenMeteoApi.getFullData({
       latitude: paramLatitude,
       longitude: paramLongitude,
     })

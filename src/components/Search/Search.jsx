@@ -93,3 +93,5 @@ const Search = () => {
 }
 
 export default Search
+
+// по хорошему добавить debounce на инпут, но мне уже лень)
