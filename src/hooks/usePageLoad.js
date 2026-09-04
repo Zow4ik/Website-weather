@@ -34,11 +34,6 @@ const usePageLoad = () => {
     const paramLatitude = params.get('latitude')
     const paramLongitude = params.get('longitude')
 
-    console.log('paramName', paramName)
-    console.log('paramLatitude', paramLatitude)
-    console.log('paramLongitude', paramLongitude)
-    console.log('paramsStr', paramsStr)
-
     if (!paramName || !paramLatitude || !paramLongitude || !paramsStr) {
       defaultSubmit()
       return

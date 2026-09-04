@@ -1,5 +1,5 @@
 import styles from './CardForecast.module.scss'
-import {useUrlImage} from '@/hooks/useUrlImage.js'
+import { useUrlImage } from '@/hooks/useUrlImage.js'
 
 const CardForecast = (props) => {
   const {

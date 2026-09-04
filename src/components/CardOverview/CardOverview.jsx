@@ -1,6 +1,6 @@
 import styles from './CardOverview.module.scss'
-import {useContext} from 'react'
-import {WeatherContext} from '@/context/WeatherContext.jsx'
+import { useContext } from 'react'
+import { WeatherContext } from '@/context/WeatherContext.jsx'
 import { getAirQualityStatus, getHpaState, getUvIndexStatus } from '@/utils/checkIndexWeather.js'
 
 const CardOverview = (props) => {
@@ -39,7 +39,7 @@ const CardOverview = (props) => {
         <h3 className={styles.title}>Sunrise & Sunset</h3>
         <div className={styles.sunrise}>
           <img
-            src="/public/images/sunrise.svg"
+            src="/Website-weather/images/sunrise.svg"
             alt=""
             width="48"
             height="48"
@@ -55,7 +55,7 @@ const CardOverview = (props) => {
         </div>
         <div className={styles.sunset}>
           <img
-            src="/public/images/sunset.svg"
+            src="/Website-weather/images/sunset.svg"
             alt=""
             width="48"
             height="48"

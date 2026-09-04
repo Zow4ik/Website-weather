@@ -1,6 +1,6 @@
 import styles from './TemperatureToday.module.scss'
-import {useContext} from 'react'
-import {WeatherContext} from '@/context/WeatherContext.jsx'
+import { useContext } from 'react'
+import { WeatherContext } from '@/context/WeatherContext.jsx'
 
 const TemperatureToday = () => {
   const {
@@ -19,7 +19,7 @@ const TemperatureToday = () => {
     <div className={styles.container}>
       <div className={styles.item}>
         <img
-          src="/images/temperature-min.svg"
+          src="/Website-weather/images/temperature-min.svg"
           alt=""
           width="24"
           height="24"
@@ -32,7 +32,7 @@ const TemperatureToday = () => {
       </div>
       <div className={styles.item}>
         <img
-          src="/images/temperature-max.svg"
+          src="/Website-weather/images/temperature-max.svg"
           alt=""
           width="24"
           height="24"

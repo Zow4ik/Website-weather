@@ -3,7 +3,7 @@ import Overview from '@/components/Overview/Overview.jsx'
 
 const Details = () => {
   return (
-    <section className="weather-details">
+    <section>
       <Forecast />
       <Overview />
     </section>

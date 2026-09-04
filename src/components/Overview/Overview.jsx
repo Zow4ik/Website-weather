@@ -1,7 +1,6 @@
 import styles from './Overview.module.scss'
 import CardOverview from '@/components/CardOverview/CardOverview.jsx'
-import ChartPrecipitation
-  from '@/components/ChartPrecipitation/ChartPrecipitation.jsx'
+import ChartPrecipitation from '@/components/ChartPrecipitation/ChartPrecipitation.jsx'
 
 const Overview = () => {
   return (
@@ -10,17 +9,17 @@ const Overview = () => {
       <ul className={styles.cards}>
         <CardOverview
           title='Air Quality Index'
-          srcImage='/images/air.webp'
+          srcImage='/Website-weather/images/air.webp'
           type='air'
         />
         <CardOverview
           title='UV Index'
-          srcImage='/images/uv.webp'
+          srcImage='/Website-weather/images/uv.webp'
           type='uv'
         />
         <CardOverview
           title='Pressure (hpa)'
-          srcImage='/images/hpa.webp'
+          srcImage='/Website-weather/images/hpa.webp'
           type='hpa'
         />
         <ChartPrecipitation />

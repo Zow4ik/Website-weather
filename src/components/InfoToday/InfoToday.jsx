@@ -1,7 +1,7 @@
 import styles from './InfoToday.module.scss'
-import {useContext} from 'react'
-import {WeatherContext} from '@/context/WeatherContext.jsx'
-import {useUrlImage} from '@/hooks/useUrlImage.js'
+import { useContext } from 'react'
+import { WeatherContext } from '@/context/WeatherContext.jsx'
+import { useUrlImage } from '@/hooks/useUrlImage.js'
 
 const InfoToday = () => {
   const {

@@ -25,4 +25,6 @@ export default defineConfig(({ mode }) => ({
   build: {
     sourcemap: true
   },
+
+  base: '/Website-weather/',
 }))

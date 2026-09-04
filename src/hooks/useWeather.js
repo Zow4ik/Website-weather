@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {openMeteoApi} from '@/api/openMeteoApi.js'
+import { openMeteoApi } from '@/api/openMeteoApi.js'
 
 export const useWeather = () => {
   const [value, setValue] = useState('')

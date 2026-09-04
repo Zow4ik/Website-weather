@@ -1,6 +1,6 @@
 import styles from './StatsToday.module.scss'
-import {useContext} from 'react'
-import {WeatherContext} from '@/context/WeatherContext.jsx'
+import { useContext } from 'react'
+import { WeatherContext } from '@/context/WeatherContext.jsx'
 
 const StatsToday = () => {
   const {
@@ -19,7 +19,7 @@ const StatsToday = () => {
     <div className={`${styles.stats} card`}>
       <div className={styles.stat}>
         <img
-          src="/images/water.svg"
+          src="/Website-weather/images/water.svg"
           alt=""
           width="47"
           height="47"
@@ -35,7 +35,7 @@ const StatsToday = () => {
       </div>
       <div className={styles.stat}>
         <img
-          src="/images/wind.svg"
+          src="/Website-weather/images/wind.svg"
           alt=""
           width="47"
           height="47"

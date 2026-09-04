@@ -1,5 +1,6 @@
+/* eslint-disable */
 import { createContext } from 'react'
-import {useWeather} from '@/hooks/useWeather.js'
+import { useWeather } from '@/hooks/useWeather.js'
 
 export const WeatherContext = createContext([])
 
